@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Console\App\Commands\AddUserCommand;
+use Console\App\Commands\SendMessageCommand;
+use Console\App\Commands\AddCartCommand;
+
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\ErrorHandler\Debug;
+
+use App\Kernel;
+
+$app = new Application();
+$app->add(new AddUserCommand());
+$app->add(new AddCartCommand());
+$app->add(new SendMessageCommand());
+$app->run();
