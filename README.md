@@ -14,4 +14,8 @@ configure db file `/config/bootstrap.php`
 run command:
 `"vendor/bin/doctrine.bat" orm:schema-tool:update --force`
 
+view commands:
+
+`php bin/console list`
+
 
